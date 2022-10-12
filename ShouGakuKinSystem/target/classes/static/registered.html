@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生システム登録</title>
+
+    <!--引用css文件-->
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+    body{
+    width:768px;
+    height:1024px;
+    margin:100px auto;
+    background-image:url("TianKongImg.jpeg");
+    background-size:cover;}
+
+    h4{
+    color:Yellow;}
+    </style>
+</head>
+<body>
+<h1 align="center">学生登録手続き</h1>
+<div >
+    <form action="/Registered" method="post">
+        <!-- 方格内部 -->
+        <fieldset>
+            <legend> 個人情報</legend>
+            <table width="100%">
+            <tr>
+                <td align="right">ID:</td>
+                <td><input type="number"　name="ID" value="10000" placeholder="ID"></td>
+            </tr>
+
+            <tr>
+                <td align="right">Name:</td>
+                <td><input type="text" name="name" placeholder="名前"></td>
+            </tr>
+
+                <tr>
+                    <td align="right">School:</td>
+                    <td><input type="text" name="school" placeholder="学校"></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Grade:</td>
+                    <td><input type="checkbox" name="grade" placeholder="学年">1年
+                        <input type="checkbox" name="grade" placeholder="学年">2年
+                        <input type="checkbox" name="grade" placeholder="学年">3年</td>
+                </tr>
+
+                <tr>
+                    <td align="right">Specialty:</td>
+                    <td><select name="specialty">
+                        <option value="bk">语言</option>
+                        <option value="dz">自然</option>
+                        <option value="xx">社会</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                    <td align="right">Gender:</td>
+                    <td> <input type="radio" name="gender" placeholder="F">男
+                        <input type="radio" name="gender" placeholder="M">女</td>
+                </tr>
+
+                <tr>
+                    <td align="right">Age:</td>
+                    <td><input type="number" name="age" placeholder="年齢"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+        <h4 align="center"><input type="submit" value="registered" style="color: YellowGreen;"></h4>
+
+        <h5 align="center"><a href="http://localhost:8080">点击链接跳转到登录🔗</a>
+        </h5>
+
+    </form>
+</div>
+</body>
+</html>
