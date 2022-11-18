@@ -1,0 +1,19 @@
+.partent{
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+.p{
+    top: 50%;
+    text-align: center;
+
+}
+.container div{
+    border: 1px solid red;
+    padding: 10px;
+    width: 100px;
+}
+.container{
+    display: flex;
+}

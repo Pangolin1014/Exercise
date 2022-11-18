@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="resources.CustomerMapper">
+  
+  	<insert id="CustomerInsertById">
+		insert into customer (customer_id,customer_password,customer_name,customer_address,customer_type)
+		values(#{id},#{password},#{name},#{address},#{type})
+	</insert>
+	
+	<select id="CustomerSelectById" parameterType="int" resultType="com.myatis.Customer">
+	select * from customer where customer_id = #{id}
+	</select>
+	
+	<update id="UpdetaById">
+		update customer set
+		 
+			customer_password = #{customer_password},
+			customer_name = #{customer_name},
+			customer_address = #{customer_address},
+			customer_type = #{customer_type}
+			
+		where customer_id = #{customer_id}
+	</update>
+	
+	<delete id="DeleteById">
+	
+		delete from customer 
+		where customer_id = #{customer_id}
+	
+	</delete>
+	
+	
+	
+</mapper>
