@@ -2,7 +2,9 @@ package com.example.LoginSystem.controller;
 
 import java.io.IOException;
 
-import org.springframework.web.bind.annotation.GetMapping;
+
+
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +26,7 @@ public class CustomerApiTextController {
 		CustomerService fin = new CustomerServiceImpl();
 		
 		
-		@GetMapping
+		@PostMapping
 		public Customer apiText(HttpServletRequest request) throws IOException {
 			
 		
@@ -33,8 +35,7 @@ public class CustomerApiTextController {
 		
 		Customer abc = new Customer();
 		
-		abc = ex.selectUserById(id);
-		
+		abc = ex.selectUserById(id);	
 		return abc;
 		
 		
